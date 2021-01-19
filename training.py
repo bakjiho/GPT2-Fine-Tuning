@@ -60,7 +60,6 @@ trainer = Trainer(
     data_collator=data_collator,
     train_dataset=train_dataset,
     eval_dataset=test_dataset
-    # prediction_loss_only=True,
 )
 trainer.train("result")
 trainer.save_model("result")

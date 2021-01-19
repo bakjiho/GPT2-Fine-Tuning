@@ -13,7 +13,7 @@ import json
 
 from transformers import AutoTokenizer
 
-tokenizer = AutoTokenizer.from_pretrained("gpt2-large")
+tokenizer = AutoTokenizer.from_pretrained("gpt2")
 
 train_path = './test.txt'
 test_path = './test.txt'
@@ -41,7 +41,7 @@ def load_dataset(train_path,test_path,tokenizer):
 train_dataset,test_dataset,data_collator = load_dataset(train_path,test_path,tokenizer)
 from transformers import Trainer, TrainingArguments,AutoModelWithLMHead
 
-model = AutoModelWithLMHead.from_pretrained("gpt2-large")
+model = AutoModelWithLMHead.from_pretrained("gpt2")
 
 
 training_args = TrainingArguments(
