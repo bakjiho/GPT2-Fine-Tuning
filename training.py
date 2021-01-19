@@ -17,8 +17,6 @@ tokenizer = AutoTokenizer.from_pretrained("gpt2-large")
 
 train_path = './test.txt'
 test_path = './test.txt'
-#train_path = '/home/workspace/gpt2-fine-tuning/test.txt'
-#test_path = '/home/workspace/gpt2-fine-tuning/test.txt'
 
 from transformers import TextDataset,DataCollatorForLanguageModeling
 
@@ -52,7 +50,7 @@ training_args = TrainingArguments(
     per_device_eval_batch_size=32,  # batch size for evaluation
     eval_steps = 400, # Number of update steps between two evaluations.
     save_steps=800, # after # steps model is saved
-    warmup_steps=500,# number of warmup steps for learning rate scheduler
+    warmup_steps=500 # number of warmup steps for learning rate scheduler
     )
 
 
